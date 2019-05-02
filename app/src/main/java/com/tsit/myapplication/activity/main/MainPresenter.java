@@ -1,5 +1,7 @@
 package com.tsit.myapplication.activity.main;
 
+import android.os.Bundle;
+
 class MainPresenter implements MainContractor.iPresenter {
     private MainContractor.iModel mModel;
     private MainContractor.iView mView;
@@ -10,8 +12,8 @@ class MainPresenter implements MainContractor.iPresenter {
     }
 
     @Override
-    public void onCreateView() {
-        mView.showPage(1);
+    public void onCreateView(Bundle savedInstanceState) {
+        mView.showPage(1,savedInstanceState);
     }
 
 

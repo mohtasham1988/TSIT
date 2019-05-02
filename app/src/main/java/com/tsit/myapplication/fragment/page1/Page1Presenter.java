@@ -1,6 +1,8 @@
 package com.tsit.myapplication.fragment.page1;
 
 
+import android.os.Bundle;
+
 class Page1Presenter implements Page1Contractor.iPresenter {
     private Page1Contractor.iModel mModel;
     private Page1Contractor.iView mView;
@@ -11,8 +13,8 @@ class Page1Presenter implements Page1Contractor.iPresenter {
     }
 
     @Override
-    public void onCreateView() {
-        mView.initWebView();
+    public void onCreateView(Bundle savedInstanceState) {
+        mView.initWebView(savedInstanceState);
         mView.initImageView(mModel.getArray());
     }
 
